@@ -1,0 +1,1 @@
+console.log("setParam.js init")

@@ -1,0 +1,39 @@
+#basicInfo .c-tab {
+    padding: 0!important;
+}
+#basicInfo .c-tab{
+    border-bottom: 1px solid #ddd;
+    padding: 0 10px;
+    margin: 10px 15px;
+}
+
+#basicInfo .c-tab ul{
+    width: 100%;
+    height: 32px;
+    list-style: none;
+    margin: 0;
+}
+#basicInfo .c-tab ul li{
+    color: #666;
+    font-size: 12px;
+    margin: 0 20px;
+}
+#basicInfo .c-tab ul li{
+    background: #fff;
+    line-height: 20px;
+    border-radius: 3px 3px 0 0;
+    text-align: center;
+    float: left;
+    list-style: none;
+}
+#basicInfo .c-tab ul li a:hover, #basicInfo .c-tab ul li.active a{
+    border-bottom: 3px solid #f7b749;
+}
+
+#basicInfo .c-tab ul li a{
+    padding: 5px 16px;
+    display: block;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}

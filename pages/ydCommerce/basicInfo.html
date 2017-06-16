@@ -1,0 +1,43 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="/css/m/ydCommerce/basicInfo.css">
+    </head>
+    <body class="hold-transition skin-black sidebar-mini fixed">
+        <!-- <h2 class="test" style="margin:15px">基础资料</h2> -->
+        <div id="basicInfo" class="mobile-area tableContent">
+        	<div class="c-tab J_tab">
+        		<ul>
+        			<li name="goodsProperty" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/goodsProperty.html">
+        				<a href="javascript:void(0)">商品属性</a>
+        			</li>
+        			<li name="muchSizes" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/muchSizes.html">
+        				<a href="javascript:void(0)">尺寸组</a>
+        			</li>
+        			<li name="size" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/size.html">
+        				<a href="javascript:void(0)">尺寸</a>
+        			</li>
+        			<li name="color" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/color.html">
+        				<a href="javascript:void(0)">颜色</a>
+        			</li>
+        			<li name="styleNum" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/styleNum.html">
+        				<a href="javascript:void(0)">款号</a>
+        			</li>
+        			<li name="styleColor" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/styleColor.html">
+        				<a href="javascript:void(0)">款号颜色</a>
+        			</li>
+        			<li name="sku" @click="vm.showchild" url="/pages/ydCommerce/basicInfo/sku.html">
+        				<a href="javascript:void(0)">SKU</a>
+        			</li>
+        		</ul>
+        	</div>
+            <keep-alive>
+                <component :is="vm.childs.basicInfo" :ref="vm.childs.basicInfo"></component>
+            </keep-alive>
+            
+        </div>
+		
+    </body>
+
+
+</html>

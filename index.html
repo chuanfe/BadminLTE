@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>BadminLTE</title>
+  
+  <meta content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no" name="viewport">
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"> 
+  
+  <link rel="stylesheet" href="/css/skins/skin-black.min.css">
+  
+  <link rel="stylesheet" type="text/css" href="/css/m/model.min.css">
+  <link rel="stylesheet" type="text/css" href="/css/m/public.css">
+  
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+  <style type="text/css">body,html{font-family:"PingFang SC","Microsoft YaHei",sans-serif;height:100%;width:100%}.component-fade-enter-active,.component-fade-leave-active{transition:opacity .2s ease}.component-fade-enter,.component-fade-leave-active{opacity:0}</style>
+</head>
+
+<body class="hold-transition skin-black sidebar-mini fixed" style="background-color:#e7e8eb!important;overflow-y:hidden">
+
+
+<div id="app" class="">
+
+  <header class="main-header">
+      <a href="" class="logo">       
+        <span class="logo-lg">         
+          <img src="/img/logo.png" alt="" title="logo">
+        </span>
+      </a>
+    <nav class="navbar navbar-static-top" role="navigation">     
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">                  
+          <li class="dropdown qrcode-menu">
+            
+            <a href="#" class="dropdown-toggle">
+              <i class="menu" style="background:url(/img/navbg.png) no-repeat;background-position:-150px 0;width:20px;height:20px;background-size:cover"></i>
+              <span class="top-sign-bubble" style="width:40px;left:20px!important">二维码</span>
+            </a>
+            <ul class="dropdown-menu" style="margin-right:-60px;color:#333;width:200px!important">
+
+	            <li style="width:200px!important">
+	              <ul class="menu" style="left:0">
+	                <li style="width:200px!important">
+	                  <a href="#" style="display:block;height:auto!important">
+	                    <div class="pull-left" style="margin-right:10px;width:70px;height:70px">
+	                      <img src="" class="img-circle" alt="" style="width:70px;height:70px">
+	                    </div>
+	                    <p style="color:#333;height:30px;font-size:12px;float:left;margin-top:10px">扫描二维码</p>
+	                    <p style="color:#333;height:30px;font-size:12px;float:left;width:100px">欢迎成为店铺会员</p>
+	                  </a>
+	                </li>
+	              </ul>
+	            </li>
+	            <li class="footer" style="width:200px!important;padding-left:50px">
+	            		<a href="" class="" style="color:#fff;text-align:center;width:100px;background:#488FE1;padding:0!important;height:30px!important;line-height:30px!important;color:#fff;margin-bottom:5px;border-radius:4px">下载会员二维码</a>
+	            </li>
+	          </ul>
+
+          </li>
+          
+          <li class="dropdown2 notifications-menu">
+            
+            <a href="#" class="dropdown-toggle">
+              <i class="menu" style="background:url(/img/navbg.png) no-repeat;background-position:-30px 0;width:20px;height:20px;background-size:cover"></i>
+              <span class="top-sign-bubble">客服</span>
+            </a>
+
+          </li>
+          
+          <li class="dropdown2 tasks-menu">
+            
+            <a href="#" class="dropdown-toggle">
+              <i class="menu" style="background:url(/img/navbg.png) no-repeat;background-position:-60px 0;width:20px;height:20px;background-size:cover"></i>
+              <span class="unread-msg" style="left:45px!important;top:5px!important;color:#fff"></span>
+              <span class="top-sign-bubble">消息</span>
+            </a>
+
+          </li>
+        
+          <li class="dropdown2">
+            <a target="_self" href="/p/cs/logout">
+              <i class="menu" style="background:url(/img/navbg.png) no-repeat;background-position:-180px 0;width:20px;height:20px;background-size:cover"></i>
+              <span class="top-sign-bubble">退出</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  
+  <aside class="main-sidebar" style="overflow:hidden">
+
+    
+    <section class="sidebar" style="padding-bottom:20px">
+    	  <div class="MyStore">
+    	  	<a href="#" class="dropdown-toggle" data-toggle="dropright">
+              <img src="/img/shop-default.png" class="user-image" alt="User Image">
+              <span class="hidden-xs" style="color:#95a5b4;font-size:16px">测试小店</span>
+        </a>
+         <ul class="dropdown-menu" style="box-shadow:1px 1px 6px 0 rgba(0,0,0,.3);z-index:2100">
+              <li class="user-header">
+                <img th:src="@{${#utils.getStore(#httpServletRequest).getString('STOREIMAGE')}}" class="img-circle" alt="User Image">
+                <p th:text="${#utils.getStore(#httpServletRequest).getString('STORENAME')}"></p>
+              </li>
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">追随者</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">销售</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">销售</a>
+                  </div>
+                </div>
+              </li>
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn">配置文件</a>
+                </div>
+                <div class="pull-right">
+                  <a href="/c/logout" target="_self" class="btn">退 出</a>
+                </div>
+              </li>
+            </ul>
+    	  </div>
+        <ul class="sidebar-list">
+          <li class="title">一级菜单</li>
+          <ul>
+            <li name="basicInfo" url="/pages/ydCommerce/basicInfo.html" @click="toshow"><i style="background-position: 0px -52px;"></i><span>基础资料</span></li>
+            <li name="setParam" url="/pages/ydCommerce/setParam.html" @click="toshow"><i style="background-position: 0px -52px;"></i><span>参数设置</span></li>
+            <li name="putIn" url="/pages/ydCommerce/putIn.html" @click="toshow"><i style="background-position: 0px -52px;"></i><span>投放</span></li>
+          </ul>
+        </ul>
+      
+    </section>
+    
+  </aside>
+
+  
+  <div class="content-wrapper">
+    
+    <!-- 主页面tab -->
+    <section class="content-header content-box content-tabs" style="z-index:1000!important;overflow:hidden">
+    		<ul></ul>     
+    </section>    
+    <section class="content">
+
+      
+      <div class="" style="min-height:0!important;color:red">
+      	  <div id="componentsheader"></div>
+         
+          <div id="parent" style="overflow-x:hidden">
+              
+              
+
+              <keep-alive>
+                  <component :is="componentId" :ref="componentId" id="parents"></component>
+              </keep-alive>
+
+          </div>
+         
+      </div>
+
+    </section>
+    
+  </div>
+  
+  <div class="mask servicesIndex indexRight" style="z-index:30000">
+    <div class="service-mask">
+      <div class="top-banner"></div>
+      <div class="contact">
+          <span class="shopNo">店铺ID：
+            <span class="copyShopId">[[${#utils.getStore(#httpServletRequest).getString('STOREID')}]]</span>
+            <object type="application/x-shockwave-flash" width="48" height="12" id="forLoadSwf" style="visibility:visible">
+              <param name="wmode" value="transparent">
+              <param name="allowScriptAccess" value="always">
+              <param name="flashvars" value="">
+            </object></span>
+            <div class="service-card">
+              <i class="fa fa-phone"></i>
+              <span>电话客服</span>
+              <span class="numbers">400-620-9800</span>
+            </div>
+            <div class="service-card">
+              <i class="fa fa-qq"></i>
+              <span>QQ客服</span>
+              <a class="numbers" style="float:right;text-align:right" href="http://wpa.qq.com/msgrd?v=6&uin=1517745412&site=qqmenu=yes" target="_blank">1517745412</a>
+            </div>
+            <div class="service-card">
+              <i class="fa fa-search"></i>
+              <span>自助客服</span>
+              <span><a href="#" target="_blank">去搜索</a></span>
+            </div>
+            <div class="report">
+              <textarea id="service-report" placeholder="您也可以直接留言给我们哦～"></textarea>
+              <label for="service-phone">联系电话：</label>
+              <input id="service-phone" type="text">
+              <button>提交</button>
+            </div>
+            </div>
+            </div>
+            <div class="copyright">©2016 shop.popcircle.cn All Rights Reserved</div>
+        </div>
+  
+  <div class="mask" style="z-index:30000;padding:10px">
+    <div class="message-mask">
+        <div class="message-mask">
+            <img class="no-msg-img" src="/img/no-message.png">
+            <p class="no-msg-text">还没有收到任何消息哦！</p>
+            
+            
+            
+        </div>
+        
+    </div>
+  </div>
+
+  <div class="modal fade" id="MessageModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="margin-top:-150px!important">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title" id="myModalLabel"></h4>
+            </div>
+            <div class="modal-body">
+            		<p>
+            			<span class="itle">消息时间:</span>
+            			<span class="megtime"></span> 
+            		</p>
+            		<p>
+            			<span class="itle">消息内容:</span>
+            			<span class="meg" style="height:180px;overflow:auto"></span> 
+            		</p>
+            </div>
+        </div>
+    </div>
+</div>
+  
+
+
+
+<div class="loadingbox">
+  <div id="LoadingBox">
+    <p>
+      <img src="/img/loadingbg.gif" alt="">
+    </p>
+    <span>正在加载，请稍等...</span>
+</div>
+</div>
+
+</div>
+
+
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/third.min.js"></script>
+<script src="/js/app.min.js"></script>
+<script src="/js/admin.js"></script>
+
+<script type="text/javascript" src="/js/vue.min.js"></script>
+<script type="text/javascript" src="/js/frame.js"></script>
+
+
+
+
+</body>
+</html>

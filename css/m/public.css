@@ -1,0 +1,139 @@
+table > thead{
+	border-radius: 3px 3px 0 0;
+    background-color: #ebf6fb!important;
+    line-height: 38px;
+    height: 38px;
+}
+table > thead > tr{
+	color: #000;
+    font-size: 14px;
+}
+table > thead > tr > th{
+	position: relative;
+    border-bottom: 1px solid #94b1cc!important;
+}
+table > tbody > tr{
+    font-size: 13px!important;
+    
+    background: #fff!important;
+}
+table > tbody > tr > td:first-child{
+	border-left: 0;
+}
+table > tbody > tr > td{
+	text-align: left;
+    white-space: nowrap!important;
+    text-overflow: ellipsis!important;
+    font-size: 14px!important;
+    vertical-align: middle!important;
+    padding: 0 15px !important;
+    line-height: 40px !important;
+    height: 40px !important;
+    border-left: 1px solid #ddd;
+    border-bottom: 1px solid #ddd!important;
+    cursor: pointer;
+
+}
+table > tbody tr:nth-child(2n) td {
+	background: #fafafa
+}
+
+table > tbody tr:hover td {
+	background: #eee
+}
+
+/*反锯齿*/
+.table-box {
+    -webkit-font-smoothing: antialiased;
+}
+
+.table-box{
+    font-size: 12px;
+    padding: 10px 15px;
+}
+.table-box .table-head{margin-bottom: 15px;}
+.table-box .table-condition .table-btn{
+    float: left;
+    padding: 0 10px;
+    margin-right: 10px;
+}
+.table-box .table-condition .table-btn {
+    font-size: 13px;
+    height: 32px;
+    line-height: 32px;
+    background: #16b3f5;
+    color: #fff;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+}
+.table-box .table-condition .table-btn span {
+    padding-left: 3px;
+}
+.table-foot{
+	position: fixed;
+    left: 210px;
+    right: 25px;
+    bottom: 10px;
+    padding: 15px 20px;
+    background: #fff;
+}
+.table-pages{
+
+}
+.single-pages{
+	    float: left;
+    font-size: 14px;
+    padding-right: 20px;
+}
+.single-pages span{
+	
+}
+.single-pages select{
+	height: 26px;
+    background: #fff;
+    border-color: #ccc;
+    border-radius: 5px;
+}
+.pages{
+	float: right;
+}
+.pages ul{
+	padding: 0;
+    margin: 0;
+}
+.pages ul li{
+	cursor: pointer;
+    display: block;
+    float: left;
+    list-style: none;
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    width: auto;
+    min-width: 28px;
+    height: 26px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-size: 12px;
+    line-height: 14px;
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px;
+}
+.pages ul li.active{
+	background-color: #64b669;
+    border: 1px solid #64b669;
+    pointer-events: none;
+}
+.pages ul li.active a{color: #fff}
+.pages ul li.disabled{
+	pointer-events: none;
+}
+.pages ul li a{
+	cursor: pointer;
+    color: #333;
+}
+.pages ul li.disabled a{
+	color: #dcdcdc;
+    pointer-events: none;
+}

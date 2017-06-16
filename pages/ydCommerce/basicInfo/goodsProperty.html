@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    	<!-- 商品属性 -->
+        <div id="goodsProperty" name="goodsProperty" class="table-box goodsProperty">
+        	<div class="table-head fix">
+        		<div class="table-condition">
+        			<a class="table-btn" href="javascript:void(0);">
+        				<span>产生品牌档</span>
+        			</a>
+        			<a class="table-btn" href="javascript:void(0);">
+        				<span>产生款号属性信息</span>
+        			</a>
+        			<a class="table-btn add-btn icon-goods" href="javascript:void(0);">
+        				<i class="fa fa-plus"></i>
+        				<span>新增</span>
+        			</a>
+        		</div>
+        	</div>
+        	<div class="table-body">
+        		<div class="table-record">
+        			<table class="table table-border">
+		        		<thead>
+		        			<tr>
+		        				<th>属性标志</th>
+		        				<th>名称</th>
+		        				<th>描述</th>
+		        				<th>属性归属</th>
+		        				<th>操作</th>
+		        			</tr>
+		        		</thead>
+		        		<tbody>
+		        			 <tr v-for="item in items">  
+		        				 <td>{{item.TAG}}</td>
+		        				<td>{{item.NAME}}</td>
+		        				<td>{{item.DESC}}</td>
+		        				<td>{{item.ATT_TYPE}}</td>
+		        				<td>
+		        					<a class="text-linking" href="javascript:void(0);">修改</a>|
+		        					<a class="text-linking" href="javascript:void(0);">删除</a>
+		        				</td> 
+		        			 </tr> 
+		        			<!-- <tr>
+		        				<td>属性</td>
+		        				<td>品牌</td>
+		        				<td>描述</td>
+		        				<td>品牌</td>
+		        				<td>
+		        					<a class="text-linking" href="javascript:void(0);">修改</a>|
+		        					<a class="text-linking" href="javascript:void(0);">删除</a>
+		        				</td>
+		        			</tr>
+		        			<tr>
+		        				<td>属性</td>
+		        				<td>品牌</td>
+		        				<td>描述</td>
+		        				<td>品牌</td>
+		        				<td>
+		        					<a class="text-linking" href="javascript:void(0);">修改</a>|
+		        					<a class="text-linking" href="javascript:void(0);">删除</a>
+		        				</td>
+		        			</tr>
+		        			<tr>
+		        				<td>属性</td>
+		        				<td>品牌</td>
+		        				<td>描述</td>
+		        				<td>品牌</td>
+		        				<td>
+		        					<a class="text-linking" href="javascript:void(0);">修改</a>|
+		        					<a class="text-linking" href="javascript:void(0);">删除</a>
+		        				</td>
+		        			</tr> -->
+		        		</tbody>
+	        		</table>
+        		</div>
+        	</div>
+			
+			<!-- 底部分页 -->
+        	<div class="table-foot">
+        		<div class="table-pages">
+        			<div class="single-pages">
+	        			<span>每页显示</span> 
+	        			<select>
+		        			<option>20</option>
+		        			<option>50</option> 
+		        			<option>100</option>
+		        			<option>200</option>
+	        			</select>
+	        			<span>行</span>
+        			</div>
+        			<div class="pages">
+        				<ul>
+        					<li class="prev disabled">
+        						<a>上一页</a>
+        					</li> 
+        					<!----> <!----> 
+        					<li class="active">
+        						<a>1</a>
+        					</li>
+        					<li class="">
+        						<a>2</a>
+        					</li> 
+        					<!----> <!----> 
+        					<li class="next">
+        						<a>下一页</a>
+        					</li>
+        				</ul>
+        			</div>
+        		</div>
+        	</div>
+
+
+        	<!-- <div>
+        		<p>属性：{{item.TAG}}</p>
+        	</div> -->
+	        	
+        </div>
+    </body>
+</html>
