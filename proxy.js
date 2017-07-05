@@ -8,7 +8,7 @@ var path=require('path');
 var httpProxy = require('http-proxy');
 
 var proxy = httpProxy.createProxyServer({
-    // target: 'http://114.55.249.173/:8080/',   //接口地址，换成你们后台的地址，或者线上正式环境的地址
+    // target: 'http://114.55.249.173/:8080/',   //接口转发地址
     target:'http://192.168.6.137/',
 });
 
@@ -39,8 +39,6 @@ var server = http.createServer(function (request, response) {
     //     proxy.web(request, response);
     //     return;
     // }
-    
-
 
     fs.exists(realPath, function (exists) {
         if (!exists) {
